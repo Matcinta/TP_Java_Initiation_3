@@ -1,47 +1,38 @@
 
 public abstract class Epargne extends Compte {
 
-	protected int plafond;
-	protected int minimum;
+	protected int soldeMax;
+	protected int soldeMin;
 	protected float interets;
 
 	// CONSTRUCTOR
 
-	public Epargne(Proprietaire proprietaire, int montant, int plafond, int minimum, float interets) {
-		super(proprietaire, montant);
-		this.plafond = plafond;
-		this.minimum = minimum;
+	public Epargne(Proprietaire proprietaire, int solde, String typeDeCompte, int soldeMax, int soldeMin, float interets) {
+		super(proprietaire, solde, typeDeCompte);
+		this.soldeMax = soldeMax;
+		this.soldeMin = soldeMin;
 		this.interets = interets;
 	}
 
+
 	// ******** GETTERS ********
 
-	public int getPlafond() {
-		return plafond;
+	public int getSoldeMax() {
+		return soldeMax;
 	}
 
 	public float getInterets() {
 		return interets;
 	}
 
-	public int getMinimum() {
-		return minimum;
+	public int getSoldeMin() {
+		return soldeMin;
 	}
 
 	// ******** SETTERS ********
-
-	public void setMinimum(int minimum) {
-		this.minimum = minimum;
-	}
-
-	public void setPlafond(int plafond) {
-		this.plafond = plafond;
-	}
 
 	public void setInterets(float interets) {
 		this.interets = interets;
 	}
 
-	// Le proprietaire du compte peut etre une societe ou une personne physique
-	public abstract boolean isSocieteOuPersonne();
 }

@@ -3,15 +3,16 @@ import java.util.ArrayList;
 public class Personne extends Proprietaire {
 
 	private String birthDate;
-	ArrayList<Compte> listeComptes;
+
 
 	// CONSTRUCTOR
 
-	public Personne(String name, String adress, String birthDate) {
-		super(name, adress);
+	public Personne(String name, String adress, String typeDeProprio, String birthDate) {
+		super(name, adress, typeDeProprio);
 		this.birthDate = birthDate;
 
 	}
+
 
 	// ******** GETTERS ********
 
@@ -27,7 +28,7 @@ public class Personne extends Proprietaire {
 
 	@Override
 	public String toString() {
-		return "Type de propriétaire: " + getClass() + "\nNom du proprietaire: " + name + "\nAdresse du proprietaire: "
-				+ adress + "\nDate de naissance: " + birthDate + "\nNuméro de compte: ";
+		return "Type de propriétaire: " + typeDeProprio + "\nNom du proprietaire: " + name + "\nAdresse du proprietaire: "
+				+ adress + "\nDate de naissance: " + birthDate;
 	}
 }

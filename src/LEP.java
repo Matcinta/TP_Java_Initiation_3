@@ -1,9 +1,9 @@
 
 public abstract class LEP extends Compte {
 
-	public LEP(Proprietaire proprietaire, int montant) {
-		super(proprietaire, montant);
 
+	public LEP(Proprietaire proprietaire, int solde, String typeDeCompte) {
+		super(proprietaire, solde, typeDeCompte);
 	}
 
 	// Le proprietaire du compte peut etre une societe ou une personne physique

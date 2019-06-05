@@ -4,17 +4,19 @@ public abstract class Proprietaire {
 
 	protected String name;
 	protected String adress;
-	ArrayList<Compte> listeComptes;
+	protected String typeDeProprio;
+
 
 	// ******** CONSTRUCTOR ********
 
-	public Proprietaire(String name, String adress) {
-		super();
+	public Proprietaire(String name, String adress, String typeDeProprio) {
 		this.name = name;
 		this.adress = adress;
+		this.typeDeProprio = typeDeProprio;
 	}
 
 	// ******** GETTERS ********
+
 	public String getName() {
 		return name;
 	}
@@ -23,7 +25,13 @@ public abstract class Proprietaire {
 		return adress;
 	}
 
+	public String getTypeDeProprio() {
+		return typeDeProprio;
+	}
+
+
 	// ******** SETTERS ********
+
 
 	public void setName(String name) {
 		this.name = name;
@@ -33,4 +41,7 @@ public abstract class Proprietaire {
 		this.adress = adress;
 	}
 
+	public void setTypeDeProprio(String typeDeProprio) {
+		this.typeDeProprio = typeDeProprio;
+	}
 }
