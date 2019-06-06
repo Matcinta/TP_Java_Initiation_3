@@ -1,20 +1,26 @@
 
 public final class LDD extends Epargne {
 
+	public LDD(Proprietaire proprietaire, int solde) {
+		super(proprietaire, solde);
 
-	public LDD(Proprietaire proprietaire, int solde, String typeDeCompte, int soldeMax, int soldeMin, float interets) {
-		super(proprietaire, solde, typeDeCompte, soldeMax, soldeMin, interets);
 	}
 
 	@Override
-	public int decouvertAutorise() {
-		return 0;
+	public int soldeMin() {
+		return 15;
 	}
 
+	@Override
+	public int soldeMax() {
+		return 12_000;
+	}
 
-
-/* public boolean ()
-	if (debiter > soldeMin) {
-		return String "
+	@Override
+	public float interets() {
+		return 0.01f;
+	}
+	/*
+	 * public boolean () if (debiter > soldeMin) { return String "
 	 */
 }

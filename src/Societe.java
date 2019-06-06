@@ -1,14 +1,11 @@
-import java.util.ArrayList;
-
-public class Societe extends Proprietaire {
+public final class Societe extends Proprietaire {
 
 	private String managerName;
 
 	// CONSTRUCTOR
 
-
-	public Societe(String name, String adress, String typeDeProprio, String managerName) {
-		super(name, adress, typeDeProprio);
+	public Societe(String name, String adress, String managerName) {
+		super(name, adress);
 		this.managerName = managerName;
 	}
 
@@ -24,7 +21,7 @@ public class Societe extends Proprietaire {
 
 	@Override
 	public String toString() {
-		return "Type de proprietaire: Societe" +
-				"\nNom du gerant: " + managerName + "\nNom de la societe: " + name + "\nAdresse de la societe: " + adress;
+		return "Type de proprietaire: Societe" + "\nNom du gerant: " + managerName + "\nNom de la societe: " + name
+				+ "\nAdresse de la societe: " + adress;
 	}
 }

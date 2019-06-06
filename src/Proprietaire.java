@@ -4,15 +4,15 @@ public abstract class Proprietaire {
 
 	protected String name;
 	protected String adress;
-	protected String typeDeProprio;
+	ArrayList<Compte> listeCompte;
 
+	// ******** CONSTRUCTORS ********
 
-	// ******** CONSTRUCTOR ********
-
-	public Proprietaire(String name, String adress, String typeDeProprio) {
+	public Proprietaire(String name, String adress) {
 		this.name = name;
 		this.adress = adress;
-		this.typeDeProprio = typeDeProprio;
+
+		this.listeCompte = new ArrayList<>();
 	}
 
 	// ******** GETTERS ********
@@ -25,13 +25,7 @@ public abstract class Proprietaire {
 		return adress;
 	}
 
-	public String getTypeDeProprio() {
-		return typeDeProprio;
-	}
-
-
 	// ******** SETTERS ********
-
 
 	public void setName(String name) {
 		this.name = name;
@@ -41,7 +35,13 @@ public abstract class Proprietaire {
 		this.adress = adress;
 	}
 
-	public void setTypeDeProprio(String typeDeProprio) {
-		this.typeDeProprio = typeDeProprio;
+	public ArrayList<Compte> getListeCompte() {
+		return listeCompte;
+	}
+
+	public void afficherComptes() {
+		for (int i = 0; i < this.listeCompte.size(); i++) {
+			System.out.println(listeCompte.get(i));
+		}
 	}
 }

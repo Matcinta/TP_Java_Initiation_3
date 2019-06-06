@@ -1,38 +1,22 @@
 
 public abstract class Epargne extends Compte {
 
-	protected int soldeMax;
-	protected int soldeMin;
-	protected float interets;
-
 	// CONSTRUCTOR
 
-	public Epargne(Proprietaire proprietaire, int solde, String typeDeCompte, int soldeMax, int soldeMin, float interets) {
-		super(proprietaire, solde, typeDeCompte);
-		this.soldeMax = soldeMax;
-		this.soldeMin = soldeMin;
-		this.interets = interets;
+	public Epargne(Proprietaire proprietaire, int solde) {
+		super(proprietaire, solde);
+
 	}
 
+	// Methodes abstraites a implementer dans les classes filles LDD et LEP
+	public abstract int soldeMin();
 
-	// ******** GETTERS ********
+	public abstract int soldeMax();
 
-	public int getSoldeMax() {
-		return soldeMax;
-	}
+	public abstract float interets();
 
-	public float getInterets() {
-		return interets;
-	}
-
-	public int getSoldeMin() {
-		return soldeMin;
-	}
-
-	// ******** SETTERS ********
-
-	public void setInterets(float interets) {
-		this.interets = interets;
+	public void appliquerInterets() {
+		this.solde *= (1 + this.interets());
 	}
 
 }
