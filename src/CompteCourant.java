@@ -10,10 +10,12 @@ public final class CompteCourant extends Compte {
 	 * }
 	 */
 
-	public CompteCourant(Proprietaire proprietaire, int solde, int decouvert) {
+	public CompteCourant(Proprietaire proprietaire, int solde, int decouvert) { // creer une exception ici
 		super(proprietaire, solde);
 		this.decouvert = decouvert;
 	}
+
+	// Creer un deuxieme constructeur ou on spcécifie que le decouvert est a 0
 
 	// ******** GETTERS ******
 
@@ -30,9 +32,7 @@ public final class CompteCourant extends Compte {
 	// EXCEPTION
 	// Un retrait ou un virement qui dépasse le découvert autorisé sera refusé.
 
-	/*
-	 * public boolean isAccepted() { if (debiter() || virement() > this.decouvert) {
-	 * return crediter || virement; } return false; }
-	 */
+	// methode debiter a creer ici + exception
+	// methode crediter a creer ici + exception
 
 }

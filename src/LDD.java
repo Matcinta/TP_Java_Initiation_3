@@ -1,7 +1,7 @@
 
 public final class LDD extends Epargne {
 
-	public LDD(Proprietaire proprietaire, int solde) {
+	public LDD(Proprietaire proprietaire, int solde) { // creer une exception ici
 		super(proprietaire, solde);
 
 	}
@@ -20,7 +20,8 @@ public final class LDD extends Epargne {
 	public float interets() {
 		return 0.01f;
 	}
-	/*
-	 * public boolean () if (debiter > soldeMin) { return String "
-	 */
+
+	// methode debiter a creer ici + exception
+	// methode crediter a creer ici + exception
+
 }

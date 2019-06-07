@@ -9,7 +9,8 @@ public abstract class Compte {
 	private static int compteur = 441; // on peut initialiser directement dans les variables static
 
 	// ******** CONSTRUCTOR ********
-	public Compte(Proprietaire proprietaire, int solde /* , String typeDeCompte */) {
+	public Compte(Proprietaire proprietaire, int solde /* , String typeDeCompte */) { // Creer une exception si le solde
+																						// est négatif
 		super();
 		this.proprietaire = proprietaire;
 		this.numCompte = compteur++;
@@ -48,12 +49,12 @@ public abstract class Compte {
 				+ solde;
 	}
 
-	public int crediter(int montant) {
+	public int crediter(int montant) { // creer une exception ici
 		this.solde = montant + this.solde;
 		return solde;
 	}
 
-	public int debiter(int montant) throws Exception {
+	public int debiter(int montant) throws Exception { // creer une exception ici
 		if (this.solde - montant < 0) {
 			throw new Exception("Erreur, le solde est insuffisant!");
 		}
@@ -64,16 +65,18 @@ public abstract class Compte {
 	// gratuit, alors qu'un virement effectué entre deux comptes de propriétaires
 	// différents est facturé 1€ (au compte débité).
 
-	public void virement(int montant, Compte compte) throws Exception {
+	public void virement(int montant, Compte compte) throws Exception { // creer une exception ici
 
 		int taxe = 0;
 		if (this.proprietaire.equals(compte.getProprietaire())) {
 			taxe = 1;
 
 		}
-		this.debiter(montant);
+		this.debiter(montant + taxe);
 		compte.crediter(montant);
 
 	}
+
+	// creer la methode appliquer interets ici
 
 }

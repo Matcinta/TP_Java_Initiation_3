@@ -72,7 +72,7 @@ public final class Banque {
 	public ArrayList<Proprietaire> rechercheNomProprio(String name) {
 		ArrayList<Proprietaire> listeProprioParNoms = new ArrayList<>();
 		for (int i = 0; i < this.listeProprietaire.size(); i++) {
-			if (this.listeProprietaire.get(i).getName().contains(name)) {
+			if (this.listeProprietaire.get(i).getName().toLowerCase().contains(name.toLowerCase())) {
 				listeProprioParNoms.add(this.listeProprietaire.get(i));
 			}
 		}

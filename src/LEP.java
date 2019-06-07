@@ -16,12 +16,6 @@ public final class LEP extends Epargne {
 		return 7700;
 	}
 
-	// Le proprietaire du compte peut etre une societe ou une personne physique
-	/*
-	 * public boolean isSocieteOuPersonne() { if (proprietaire instanceof Societe) {
-	 * return false; } return true; }
-	 */
-
 	@Override
 	public float interets() {
 		return 0.015f;
